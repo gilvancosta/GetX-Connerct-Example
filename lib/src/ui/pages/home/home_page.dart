@@ -24,6 +24,7 @@ class HomePage extends GetView<HomeController> {
             itemBuilder: (context, index) {
               final user = state[index];
               return ListTile(
+                onTap: () => controller.updateUser(user),
                 title: Text('${user.id} - ${user.name}',
                     style: const TextStyle(
                         fontSize: 16, fontWeight: FontWeight.bold)),

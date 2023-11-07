@@ -3,10 +3,10 @@ import 'dart:convert';
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
 class UserEntity {
-  final int? id;
-  final String name;
-  final String email;
-  final String password;
+  int? id;
+  String name;
+  String email;
+  String password;
 
   UserEntity({
     this.id,
