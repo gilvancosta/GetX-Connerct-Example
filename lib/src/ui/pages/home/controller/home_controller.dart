@@ -39,7 +39,19 @@ class HomeController extends GetxController with StateMixin<List<UserEntity>> {
     }
   }
 
-  void insertUser() {}
+  void insertUser() async {
+    final user = UserEntity(
+
+      name: 'João Batista',
+      email: 'test@test.com',
+      password: '123456',
+    );
+
+    await _userRepository.insertUser(user);
+
+    findAll();
+
+  }
   void updateUser(UserEntity user) {}
   void deleteUser(UserEntity user) {}
 }

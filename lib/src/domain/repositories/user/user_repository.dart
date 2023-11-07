@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:get/get.dart';
 import 'package:getx_connect_example/src/domain/entities/user/user_entity.dart';
 
@@ -12,26 +10,20 @@ class UserRepository {
   }
 
   Future<List<UserEntity>> findAll() async {
-    try {
-      final response = await restClient.get('/users');
+    final response = await restClient.get('/users');
 
-      if (response.status.hasError) {
-        throw Exception(
-            'Erro ao Carregar os Usuários (${response.statusText})');
-      }
-      log(response.request?.headers['start-time'] ?? '');
-      log(response.headers?['end-time'] ?? '');
-
-      final List<dynamic> data = response.body;
-
-      final List<UserEntity> users =
-          data.map<UserEntity>((user) => UserEntity.fromMap(user)).toList();
-
-      return users;
-    } catch (e) {
-      log('erro 444: $e');
-      return [];
+    if (response.status.hasError) {
+      throw Exception('Erro ao Carregar os Usuários (${response.statusText})');
     }
+    // log(response.request?.headers['start-time'] ?? '');
+    // log(response.headers?['end-time'] ?? '');
+
+    final List<dynamic> data = response.body;
+
+    final List<UserEntity> users =
+        data.map<UserEntity>((user) => UserEntity.fromMap(user)).toList();
+
+    return users;
   }
 
   Future<void> insertUser(UserEntity user) async {

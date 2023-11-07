@@ -3,13 +3,13 @@ import 'dart:convert';
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
 class UserEntity {
-  final int id;
+  final int? id;
   final String name;
   final String email;
   final String password;
-  
+
   UserEntity({
-    required this.id,
+    this.id,
     required this.name,
     required this.email,
     required this.password,
@@ -35,5 +35,6 @@ class UserEntity {
 
   String toJson() => json.encode(toMap());
 
-  factory UserEntity.fromJson(String source) => UserEntity.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory UserEntity.fromJson(String source) =>
+      UserEntity.fromMap(json.decode(source) as Map<String, dynamic>);
 }

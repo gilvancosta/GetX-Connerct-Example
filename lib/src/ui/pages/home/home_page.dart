@@ -43,6 +43,10 @@ class HomePage extends GetView<HomeController> {
           child: Text('Erro ao buscar usuários333'),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: controller.insertUser,
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }
