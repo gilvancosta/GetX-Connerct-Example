@@ -1,1 +1,41 @@
-{"users":[{"id":1,"name":"João Araújo","email":"test1@test.com","password":"123123"}],"products":[]}
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "João Araújo",
+            "email": "test1@test.com",
+            "password": "123123"
+        },
+        {
+            "id": 2,
+            "name": "João Batista",
+            "email": "test@test.com",
+            "password": "123456"
+        },
+        {
+            "id": 3,
+            "name": "João Batista",
+            "email": "test@test.com",
+            "password": "123456"
+        },
+        {
+            "id": 4,
+            "name": "João Batista",
+            "email": "test@test.com",
+            "password": "123456"
+        },
+        {
+            "id": 5,
+            "name": "João Batista",
+            "email": "test@test.com",
+            "password": "123456"
+        },
+        {
+            "id": 6,
+            "name": "João Batista",
+            "email": "test@test.com",
+            "password": "123456"
+        }
+    ],
+    "products": []
+}
