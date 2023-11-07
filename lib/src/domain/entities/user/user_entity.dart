@@ -1,12 +1,13 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+
 class UserEntity {
-  final String id;
+  final int id;
   final String name;
   final String email;
   final String password;
-
+  
   UserEntity({
     required this.id,
     required this.name,
@@ -25,7 +26,7 @@ class UserEntity {
 
   factory UserEntity.fromMap(Map<String, dynamic> map) {
     return UserEntity(
-      id: map['id'] as String,
+      id: map['id'] as int,
       name: map['name'] as String,
       email: map['email'] as String,
       password: map['password'] as String,
